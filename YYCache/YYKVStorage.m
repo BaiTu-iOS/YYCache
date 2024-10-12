@@ -142,9 +142,6 @@ static UIApplication *_YYSharedApplication() {
         _dbStmtCache = NULL;
     }
     
-    if (_dbStmtCache) CFRelease(_dbStmtCache);
-    _dbStmtCache = NULL;
-    
     do {
         retry = NO;
         result = sqlite3_close(_db);
